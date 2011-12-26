@@ -20,7 +20,7 @@ class Chef
         super
         check_syntax
         Chef::Config.from_file('solo.rb')
-        check_chef_version
+        # check_chef_version
         rsync_kitchen
         add_patches
         cook
