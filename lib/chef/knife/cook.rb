@@ -78,7 +78,7 @@ class Chef
       def cook
         logging_arg = "-l debug" if config[:verbosity] > 0
         stream_command <<-BASH
-          sudo chef-solo -c #{chef_path}/solo.rb \
+          sudo /opt/chef/bin/chef-solo -c #{chef_path}/solo.rb \
                          -j #{chef_path}/#{node_config} \
                          #{logging_arg}
         BASH
